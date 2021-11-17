@@ -1,0 +1,25 @@
+{
+  "name": "food_checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bencor29/food_checker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bencor29/food_checker/issues"
+  },
+  "homepage": "https://github.com/Bencor29/food_checker#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "mariadb": "^2.5.5",
+    "sequelize": "^6.9.0"
+  }
+}
