@@ -18,10 +18,10 @@ Product.init({
     fiber_100g: DataTypes.FLOAT,
     fiber_unit: DataTypes.STRING,
     nutriscore_grade: DataTypes.FLOAT,
+    locked: DataTypes.BOOLEAN,
 }, {
     sequelize,
     modelName: 'products',
-    timestamps: false,
 });
 
 module.exports = Product;

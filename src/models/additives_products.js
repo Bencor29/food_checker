@@ -1,20 +1,20 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config').db;
 
-class AllergensIngredients extends Model {}
-AllergensIngredients.init({
-    ingredientId: {
+class AdditivesProducts extends Model {}
+AdditivesProducts.init({
+    additiveId: {
         type: DataTypes.INTEGER,
         primaryKey: true,
     },
-    allergenId: {
+    productId: {
         type: DataTypes.INTEGER,
         primaryKey: true,
     },
 }, {
     sequelize,
-    modelName: 'ingredients_has_allergens',
+    modelName: 'products_has_additives',
     timestamps: false,
 });
 
-module.exports = AllergensIngredients;
+module.exports = AdditivesProducts;
