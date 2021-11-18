@@ -1,18 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config').db;
+const sequelize = require('../../config').db;
 
-class Ingredient extends Model {}
-Ingredient.init({
+class Additive extends Model {}
+Additive.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
     },
     name: DataTypes.STRING,
-    percent: DataTypes.STRING,
 }, {
     sequelize,
-    modelName: 'ingredients',
+    modelName: 'additives',
     timestamps: false,
 });
 
-module.exports = Ingredient;
+module.exports = Additive;

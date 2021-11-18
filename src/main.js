@@ -1,6 +1,6 @@
 const sequelize = require('./config').db;
-const Ingredient = require('./models/ingredient');
-require('./models/__relations');
+const Ingredient = require('./models/db/ingredient');
+require('./models/db/__relations');
 
 (async () => {
     await sequelize.sync();

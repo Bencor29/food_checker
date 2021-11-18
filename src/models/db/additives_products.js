@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config').db;
+const sequelize = require('../../config').db;
 
 class AdditivesProducts extends Model {}
 AdditivesProducts.init({

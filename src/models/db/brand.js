@@ -1,8 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config').db;
+const sequelize = require('../../config').db;
 
-class Additive extends Model {}
-Additive.init({
+class Brand extends Model {}
+Brand.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -10,8 +10,8 @@ Additive.init({
     name: DataTypes.STRING,
 }, {
     sequelize,
-    modelName: 'additives',
+    modelName: 'brands',
     timestamps: false,
 });
 
-module.exports = Additive;
+module.exports = Brand;
