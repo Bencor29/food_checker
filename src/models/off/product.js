@@ -4,11 +4,11 @@ const url = require('../../config').api;
 const fields = {
     id: 'code',
     quantity: 'quantity',
-    abbreviated_product_name_fr: 'libelle',
+    product_name: 'libelle',
     additives_tags: '_additives',
     allergens_hierarchy: '_allergens',
     brands: '_brands',
-    conservation_conditions_fr: 'conservation',
+    conservation_conditions: 'conservation',
 };
 
 /**
@@ -48,7 +48,7 @@ async function get(ean) {
     let product = {};
 
     for (const key in fields) {
-        product[fields[key]] = rawProduct[key];
+        product[fields[key]] = rawProduct[key] || null;
     }
 
     product._ingredients = getIngredients(rawProduct);
