@@ -8,9 +8,8 @@ require('./models/db/__relations');
 
 const date2h = new Date();
 const date3h = new Date();
-date2h.setHours(date2h.getHours() - 6);
-date3h.setHours(date3h.getHours() - 7);
-
+date2h.setHours(date2h.getHours() - 15);
+date3h.setHours(date3h.getHours() - 17);
 
 (async () => {
     await sequelize.sync();

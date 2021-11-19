@@ -27,6 +27,10 @@ function getIngredients(product) {
     return ingredients;
 }
 
+function firstCaps(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
 /**
  *
  * @param ean {string}
@@ -50,6 +54,8 @@ async function get(ean) {
     for (const key in fields) {
         product[fields[key]] = rawProduct[key] || null;
     }
+
+    product._brands = firstCaps(product._brands);
 
     product._ingredients = getIngredients(rawProduct);
     product.energy_100g = rawProduct.nutriments.energy_100g;
